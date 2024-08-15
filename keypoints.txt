@@ -1,0 +1,20 @@
+react-router-dom is used for navigation.
+react-hot-toast to show some toasts/upper pop-ups type.
+react-icons for some icons.
+
+Browser Router is wrapped around App so that App has access to every component coming from it.
+
+when target=_blank, it is a good practice to include rel=noreferrer to avoid sending header to that external website
+
+export default is used for exporting an object containing the functions as properties, not individual named exports.
+
+when exporting a regular function, we use normal export
+
+environment variables definitely hide the critical variables in inspect code section. 
+But in build:
+npm run build
+npm run preview
+The env variables are not masked anymore.
+So, preferrable to not use the anv variables but rather store them in a server and use them.
+
+With GitHub token authentication, we can have 5000 requests per hour (send token in the header of the http request).

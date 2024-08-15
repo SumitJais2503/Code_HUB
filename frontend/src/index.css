@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+	background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.4)), url("/bg.png");
+    /* darken the image */
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+    /* always covering screen and fixed */
+}
+
+/* dark mode looking scrollbar */
+::-webkit-scrollbar {
+	width: 8px;
+}
+
+::-webkit-scrollbar-track {
+	background: #555;
+}
+
+::-webkit-scrollbar-thumb {
+	background: #121212;
+	border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: #242424;
+}
+
+/* The track is the background area of the scrollbar. It is the fixed part of the scrollbar that remains stationary while the content scrolls within a container. */
+/* The thumb is the draggable part of the scrollbar, commonly referred to as the "scroll handle." It is the element that users interact with when they want to scroll through content manually. */
+
+@layer components {
+	.bg-glass{
+		@apply bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-10 
+		hover:bg-gray-600/10 border border-gray-800 text-white;
+	}
+}
+/* making custom tailwind css classes */
